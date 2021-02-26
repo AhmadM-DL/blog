@@ -16,8 +16,8 @@ tagline:             'tagline'
 description:         'On Artificial Intelligence and other stuff'
 url:                 site url
 # rss:                 rss feed url
-baseurl:             '/{project_title}/'
-baseurl_posts_img:   '/{project_title}/assets/images/posts/'
+baseurl:             /:project_title/
+baseurl_posts_img:   :project_title/assets/images/posts/
 baseurl_featured_img: '/{project_title}/assets/images/hero/'
 baseurl_featured_thumbnail: '/{project_title}/assets/images/thumbnail/'
 baseurl_javascripts: '/{project_title}/assets/javascripts/'
