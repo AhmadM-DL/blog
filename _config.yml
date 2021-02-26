@@ -10,8 +10,8 @@ permalink:           :title
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
 locale:              your locale language # eg. en_us
-name:				         site name
-title:               site title
+name:				         Ahmad Mustapha
+title:               Ahmad Mustapha
 tagline:             'tagline'
 description:         'description'
 url:                 site url
@@ -25,7 +25,7 @@ icon:                your site icon path # /assets/img/icon.png [best 300px X 30
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name:           	 your name
+  name:           	 Ahmad Mustapha
   url:            	 your site url
   facebook:          username
   twitter:           username
