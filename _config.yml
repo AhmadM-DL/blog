@@ -15,7 +15,7 @@ title:               Ahmad Mustapha
 tagline:             'tagline'
 description:         'description'
 url:                 site url
-rss:                 rss feed url
+# rss:                 rss feed url
 baseurl:             '/blog/'
 baseurl_posts_img:   '/blog/assets/images/posts/'
 baseurl_featured_img: '/blog/assets/images/hero/'
@@ -27,16 +27,13 @@ disqus:              disqus_shortname # get it on https://disqus.com/admin/
 author:
   name:           	 Ahmad Mustapha
   url:            	 your site url
-  facebook:          username
-  twitter:           username
-  google_plus:       username
-  linkedin:          username
-  dribbble:          username
-  pinterest:         username
-  kiva:              username
+  twitter:           Ahmad__Mustapha
+  linkedin:          ahmad-mustapha-ml
+  email:             ahmad.m.mustapha@hotmail.com
+  medium:            ahmad-mustapha
 
-fb_admins:           your facebook profile id
-fb_appid:            your facebook app id
+# fb_admins:           your facebook profile id
+# fb_appid:            your facebook app id
 
 # Server
 destination:      	 ./_site
