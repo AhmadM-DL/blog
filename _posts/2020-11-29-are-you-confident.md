@@ -41,7 +41,7 @@ Consider the figure above which showcase a dataset of two classes (orange and bl
 On the other hand, **generative** models learn classes probability distribution as in the [Naive Bayes](https://jakevdp.github.io/PythonDataScienceHandbook/06.00-figure-code.html#Gaussian-Naive-Bayes) classifier. The figure below gives the intuition of such model predictions in action. In this case, if we feed the model a far data point it will output a very low class score for both classes as it is very far from both centers and beyond the data standard deviation. In this case, we can say that the model is uncertain about the decision and this point is probably out of the training data domain.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/naive_bayes_fitting.png" alt="A Neural Network decision boundary over a dataset" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/naive_bayes_fitting.png" alt="A Neural Network decision boundary over a dataset" width="50%"> -->
 {: .text-center}
 
 A Naive Bayes output over a dataset as a generative machine learning model
@@ -60,7 +60,7 @@ The below resolutions are retrieved from 2 research papers [2][3] and considered
 The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds the input N times through the same network while tweaking the network slightly every time. The tweak is done by shutting down some (different each time) of the network nodes or neurons. This is called Dropout. Dropout is first introduced as a regularization trick to prevent the model from over-fitting during *training* [4]. However, in our case, we are using it during *inference* to sample different parameters distribution. The uncertainty in this case is the output variance. In other words, if the models output different classes or the same class with different class scores the model is considered uncertain about the input.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/guess_food_blindfold.jpg" alt="Guess the food blindfolded" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/guess_food_blindfold.jpg" alt="Guess the food blindfolded" width="50%"> -->
 {: .text-center}
 
 [Guess The Food Blindfolded Challenge](https://www.realplaycoalition.com/activities-for-kids/senses-game/) 
@@ -69,7 +69,7 @@ The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds 
 We can this as analogous to shutting down a person's different sensory organs while asking him to recognize objects (say blindfold his eyes one time, and cover his skin in another, and so on). If the person constantly keeps predicting the same object despite losing different sensory organs, this means the object is very familiar to him such that he can figure it using limited sensory organs. On the other hand, if he predicts different objects each time this means that the object is challenging for him. The below figure is a bonus illustration.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/nn_mc_dropout.jpg" alt="MCDropout Uncertanity Quantification" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/nn_mc_dropout.jpg" alt="MCDropout Uncertanity Quantification" width="50%"> -->
 {: .text-center}
 
 If you are still curious about adversarial inputs, notice that a similar method has been used to detect them [5].
@@ -80,7 +80,7 @@ If you are still curious about adversarial inputs, notice that a similar method 
 Ensembles are simply training multiple neural networks with different random initialization and different shuffling of the training dataset. The uncertainty will be the variance of the models' predictions. The authors in [2] found it to be more accurate than MC-dropout in approximating the ground truth uncertainty; however, it is computationally expensive.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/young-old-ladies.png" alt="Different Perspective" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/young-old-ladies.png" alt="Different Perspective" width="50%"> -->
 {: .text-center}
 
 A group of people didn't agree on the content of image C. This means it is ambiguous.
@@ -89,7 +89,7 @@ A group of people didn't agree on the content of image C. This means it is ambig
 This reminds me of Stephen Covey "The seven habits of highly effective people" in the paradigm shift section where he tells the story when he gave one group of his students the image (A - young lady) in the above figure and the image (B - old lady) for the other group. He then gave the image (C) to both and asked them to tell what is in it. Certainly, the first group said it was a young lady and the other said it was an old one. This because - like neural networks - each group has a different perspective (different position in the parameters manifold in case of neural networks). And the fact that the same image had different interpretations means it is of ambiguous and uncertain nature. The below figure is a bonus illustration.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/ensembles.PNG" alt="Ensembles" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/ensembles.PNG" alt="Ensembles" width="50%"> -->
 {: .text-center}
 
 #### Before we continue
@@ -97,7 +97,7 @@ This reminds me of Stephen Covey "The seven habits of highly effective people" i
 Now that uncertainty is more familiar it is good to know two different types of uncertainties. (1) **Aleatoric** uncertainty captures the uncertainty in the data generating process, e.g., inherent randomness of a coin-flipping or measurement noise. This type of uncertainty cannot be reduced even if we collect more training data. (2) **Epistemic** uncertainty models the ignorance of the predictive model where it can be explained away given enough training data. The below [figure](https://towardsdatascience.com/my-deep-learning-model-says-sorry-i-dont-know-the-answer-that-s-absolutely-ok-50ffa562cb0b) explains the concept better. The orange braces corresponds to aleatoric uncertainty while the golden ones correspond to epistemic uncertainty resulting from lack of training data.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/uncertainty_types.png" alt="Uncertainty Types" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/uncertainty_types.png" alt="Uncertainty Types" width="50%"> -->
 {: .text-center}
 
 Type of uncertainties
@@ -116,7 +116,7 @@ The uncertainty quantifications presented earlier both depend on sampling a set 
 An MDN is a variant of a neural network proposed in 1994 by Christopher Bishop [6]. The author proposed the variant after proofing that conventional neural networks assume a normal distribution of the target data. In other words, if the target data was multi-modal in some region the network will fail to approximate it and learns the average. This a very important insight and should be considered by practitioners. Consider a self-driving cars dataset annotated by recording humans driving. For some similar scenarios, the humans might have behaved differently, some go left others go right. If we train the network to predict the steering angle in such scenario , it will learn to go straight (as each training sample will push the gradients toward them and the network will minimize the error by settling on the average). The below figure presents two toy datasets one with a normally distributed target and the other with a bimodal distributed one.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/normaility%20good%20bad.png" alt="Normal vs. Binormal fitting" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/normaility%20good%20bad.png" alt="Normal vs. Binormal fitting" width="50%"> -->
 {: .text-center}
 
 ##### How is an MDN different
@@ -124,7 +124,7 @@ An MDN is a variant of a neural network proposed in 1994 by Christopher Bishop [
 Rather than predicting the target directly, MDNs predicts a linear combination of **k** distributions. Rather than having one output neuron, it has 3*K ones. For each distribution, the network predicts a mean, a standard deviation, and the distribution weight. Increasing K gives the model more flexibility to model multi-model targets. The below figure illustrates an MDN.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/normal_mdn.png" alt="Normal Network vs. MDN" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/normal_mdn.png" alt="Normal Network vs. MDN" width="50%"> -->
 {: .text-center}
 
 Normal NN vs MDN
@@ -138,7 +138,7 @@ Since this article is about uncertainty quantification and not about MDNs the re
 Using MDNs the network is no more predicting one target but several distributions. The authors proposed to use the distributions mean of variances as an aleatoric uncertainty quantifier and the distributions variance of means as an epistemic uncertainty quantifier. How confusing.
 {: .text-justify}
 
-<img src="{{site.baseurl}}/assets/img/total%20variance%20-%20total%20expectation.png" alt="Total Variance and Total Expectation" width="50%">
+<!-- <img src="{{site.baseurl}}/assets/img/total%20variance%20-%20total%20expectation.png" alt="Total Variance and Total Expectation" width="50%"> -->
 {: .text-center}
 
 Illustration of Mean of variance and Variance of Means
