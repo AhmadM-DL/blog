@@ -153,7 +153,7 @@ The authors proved that those two quantities respond to different ground truth u
 This might have been a wee bit heavy for some readers. Check out the below video to refresh your mind and see how humans can beat machines through out-of-domain inputs.
 {: .text-justify}
 
-{% include ytb.html id="KriBQVhsgZk" %}
+<!-- {% include ytb.html id="KriBQVhsgZk" %} -->
 {: .text-center}
 
 ### Conclusion
