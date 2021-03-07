@@ -106,3 +106,53 @@ Type of uncertainties
 So far the proposed methodologies target epistemic uncertainty as aleatoric one is already available as the class scores (this is different for regression though, check the references for further details).
 {: .text-justify}
 
+#### Sampling Free Uncertainty Quantification
+
+The uncertainty quantifications presented earlier both depend on sampling a set of different model parameters (different networks). The authors in [3] proposed a sampling free one for regression using mixture neural networks (MDNs).
+{: .text-justify}
+
+##### Why MDNs
+
+An MDN is a variant of a neural network proposed in 1994 by Christopher Bishop [6]. The author proposed the variant after proofing that conventional neural networks assume a normal distribution of the target data. In other words, if the target data was multi-modal in some region the network will fail to approximate it and learns the average. This a very important insight and should be considered by practitioners. Consider a self-driving cars dataset annotated by recording humans driving. For some similar scenarios, the humans might have behaved differently, some go left others go right. If we train the network to predict the steering angle in such scenario , it will learn to go straight (as each training sample will push the gradients toward them and the network will minimize the error by settling on the average). The below figure presents two toy datasets one with a normally distributed target and the other with a bimodal distributed one.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/normaility%20good%20bad.png" alt="Normal vs. Binormal fitting" width="50%"> -->
+{: .text-center}
+
+##### How is an MDN different
+
+Rather than predicting the target directly, MDNs predicts a linear combination of **k** distributions. Rather than having one output neuron, it has 3*K ones. For each distribution, the network predicts a mean, a standard deviation, and the distribution weight. Increasing K gives the model more flexibility to model multi-model targets. The below figure illustrates an MDN.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/normal_mdn.png" alt="Normal Network vs. MDN" width="50%"> -->
+{: .text-center}
+
+Normal NN vs MDN
+{: .text-center}
+
+Since this article is about uncertainty quantification and not about MDNs the reader is asked to follow up about MDNs through the references.
+{: .text-justify}
+
+##### Back to the sampling free thing
+
+Using MDNs the network is no more predicting one target but several distributions. The authors proposed to use the distributions mean of variances as an aleatoric uncertainty quantifier and the distributions variance of means as an epistemic uncertainty quantifier. How confusing.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/total%20variance%20-%20total%20expectation.png" alt="Total Variance and Total Expectation" width="50%"> -->
+{: .text-center}
+
+Illustration of Mean of variance and Variance of Means
+{: .text-center}
+
+The figure above illustrates both values. Consider an MDN with k=3 i.e. the network is predicting three distributions. The **Variance of Means** is how much the means of the three distributions away from each other if they are near to each other this means we have a low epistemic uncertainty and we are good to go. Otherwise, the network function should be inspected or delegated in the scenario of means being far from each other as it is encountering a high uncertainty situation. The **Mean of variance** on the other hand, is the average spreads of the three distributions. If all the distributions are widely spread then aleatoric uncertainty is high. If all are narrowly spread then aleatoric uncertainty is low. Check [this site](http://brenocon.com/totvar/) for an interactive demo.
+{: .text-justify}
+
+The authors proved that those two quantities respond to different ground truth uncertainty as stated. Note that unlike the previous quantifications this has not been tested on large scale problems.
+{: .text-justify}
+
+This might have been a wee bit heavy for some readers. Check out the below video to refresh your mind and see how humans can beat machines through out-of-domain inputs.
+{: .text-justify}
+
+<!-- {% include ytb.html id="KriBQVhsgZk" %} -->
+{: .text-center}
+

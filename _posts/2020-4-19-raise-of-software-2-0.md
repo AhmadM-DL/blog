@@ -87,7 +87,7 @@ Here I will mention some real software 2.0 examples so that one can understand t
 I think that many people have heard or used Prisma by now. Prisma is a photo-editing mobile application that uses neural networks and artificial intelligence to apply artistic effects to transform images. The app was created by Alexey Moiseenkov, Oleg Poyaganov, Ilya Frolov, Andrey Usoltsev, Aram Hardy. It was launched in June 2016 as a [free mobile app](https://en.wikipedia.org/wiki/Prisma_(app)). Prisma utilizes the recent [neural style transfer](https://en.wikipedia.org/wiki/Neural_Style_Transfer) technology to redraw an image using another image style. See how Prisma is a deep-learning-based product, how the underlying model interpretability doesn't matter, and how it certainly had a High R&D score. Won't this technology be cool for videos? [check out this](https://www.youtube.com/watch?v=Uxax5EKg0zA). Cool ha!
 {: .text-justify}
 
-!["Mona Lisa in the style of "Woman with a Hat""](../assets/img/mona_style.jpg)
+<div class="img img--fullContainer img--14xLeading" style="background-image: url({{ site.baseurl_posts_img }}mona_style.jpg);"></div>
 {: .text-center}
 Mona Lisa in the style of "Woman with a Hat" using neural style transfer. (Image Source Wikipedia)
 {: .text-center}
