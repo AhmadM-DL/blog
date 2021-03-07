@@ -29,7 +29,7 @@ Conventional Neural Networks have no inherent uncertainty quantification. This m
 It is good to know that there exist 2 different types of machine learning models. (1) **Discriminative** models which map inputs to their classes by finding decision boundaries. (2) **Generative** models which model the data distribution and find classes central tendency and how they are spread around centers.
 {: .text-justify}
 
-<div class="img img--fullContainer img--14xLeading" style="background-image: url({{ site.baseurl_posts_img }}nn_decision_boundary.PNG);" width="50%" alt="A Neural Network decision boundary over a dataset"></div>
+<!-- <div class="img img--fullContainer img--14xLeading" style="background-image: url({{ site.baseurl_posts_img }}nn_decision_boundary.PNG);" width="50%" alt="A Neural Network decision boundary over a dataset"></div> -->
 {: .text-center}
 
 A Neural Network decision boundary over a dataset as a discriminative machine learning model
