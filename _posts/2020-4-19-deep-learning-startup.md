@@ -2,10 +2,16 @@
 layout: post
 title: The Rise of Software 2.0
 date: 2021-01-04 13:32:20 +0200
-description: How Deep Learning Is Reshaping Software Production Industry
-img: rise_ai.jpg
-fig-caption: <span>Photo by <a href="https://unsplash.com/@possessedphotography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Possessed Photography</a> on <a href="https://unsplash.com/collections/9496083/future-tech-%26-society?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-tags: [Deep Learning, Startup, Neural Networks, Software]
+last_modified_at:  2021-01-04 13:32:20 +0200
+excerpt: How Deep Learning Is Reshaping Software Production Industry
+categories: Non-Technical 
+image:
+  feature: rise_ai.jpg
+  topPosition: 0px
+tags: Deep Learning, Startup, Neural Networks, Software
+bgContrast: dark
+bgGradientOpacity: darker
+syntaxHighlighter: no
 ---
 
 At some point in my research, I was studying the interaction between Software Engineering (SE) and Artificial Intelligence (AI) in the literature. I passed by [Erik Meijer](https://www.linkedin.com/in/erikmeijer1/) keynote at the FSE'18 conference. The keynote was titled "[Behind every great deep learning framework is an even greater programming languages concept](https://dl.acm.org/doi/abs/10.1145/3236024.3280855)". The talk illustrated the deep programming language principles behind Differentiable Programming, hoping to inspire the working Software 1.0 engineers to pay serious attention to the threats and opportunities of Software 2.0.
