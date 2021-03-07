@@ -63,7 +63,7 @@ The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds 
 <!-- <img src="{{site.baseurl}}/assets/img/guess_food_blindfold.jpg" alt="Guess the food blindfolded" width="50%"> -->
 {: .text-center}
 
-[Guess The Food Blindfolded Challenge](https://www.realplaycoalition.com/activities-for-kids/senses-game/) 
+[Guess The Food Blindfolded Challenge](https://www.realplaycoalition.com/activities-for-kids/senses-game/)  
 {: .text-center}
 
 We can this as analogous to shutting down a person's different sensory organs while asking him to recognize objects (say blindfold his eyes one time, and cover his skin in another, and so on). If the person constantly keeps predicting the same object despite losing different sensory organs, this means the object is very familiar to him such that he can figure it using limited sensory organs. On the other hand, if he predicts different objects each time this means that the object is challenging for him. The below figure is a bonus illustration.
