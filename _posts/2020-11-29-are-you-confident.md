@@ -16,7 +16,7 @@ bgGradientOpacity: darker
 syntaxHighlighter: no
 ---
 
-On [14 Feb 2016](https://www.bbc.com/news/technology-35692845) Google self-driving car hit a bus. On [23 March 2018](https://www.wired.com/story/tesla-autopilot-self-driving-crash-california/) Tesla's Autopilot was involved in another deadly car crash. A big part of intelligence is not acting when one is uncertain and this has to be integrated into our artificial intelligence (AI) algorithms to avoid accidents. Regarding Neural Networks - which are the building blocks of the current Deep Learning AI wave and are being used in safety-critical applications - the problem is that they don't have an inherent uncertainty quantification. This semi-technical article discusses the matter and reports different approaches proposed to resolve the problem.
+<!-- On [14 Feb 2016](https://www.bbc.com/news/technology-35692845) Google self-driving car hit a bus. On [23 March 2018](https://www.wired.com/story/tesla-autopilot-self-driving-crash-california/) Tesla's Autopilot was involved in another deadly car crash. A big part of intelligence is not acting when one is uncertain and this has to be integrated into our artificial intelligence (AI) algorithms to avoid accidents. Regarding Neural Networks - which are the building blocks of the current Deep Learning AI wave and are being used in safety-critical applications - the problem is that they don't have an inherent uncertainty quantification. This semi-technical article discusses the matter and reports different approaches proposed to resolve the problem.
 {: .text-justify}
 
 > *A big part of intelligence is not acting when one is uncertain.*
@@ -173,4 +173,4 @@ This was a simple introduction to uncertainty quantification in deep learning. N
 
 [5] [DeepMutation: Mutation Testing of Deep Learning Systems, Lei et. al.](https://arxiv.org/abs/1805.05206)
 
-[6] [Mixture density networks, Bishop](https://research.aston.ac.uk/en/publications/mixture-density-networks)
+[6] [Mixture density networks, Bishop](https://research.aston.ac.uk/en/publications/mixture-density-networks) -->
