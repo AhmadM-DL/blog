@@ -6,7 +6,7 @@ last_modified_at:  2021-01-04 13:32:20 +0200
 excerpt: How Deep Learning Is Reshaping Software Production Industry
 categories: Non-Technical 
 image:
-  feature: rise_ai.jpg
+  feature: rise-ai.jpg
   topPosition: 0px
 tags: Deep Learning, Startup, Neural Networks, Software
 bgContrast: dark

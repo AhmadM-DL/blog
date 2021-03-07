@@ -50,3 +50,59 @@ A Naive Bayes output over a dataset as a generative machine learning model
 All in all neural networks (convolutional ones as a result) as discriminative models don't have inherent uncertainty quantifications. Also, this nature makes them more susceptible to adversarial inputs (inputs intensionally and systemically perturbed to deceive neural networks) than other models like Radial Basis Function (RBF) networks. However, this is another topic I leave for the curious to check [1]. In the following section, we will see what did researchers have proposed to add uncertainty quantification to neural networks.
 {: .text-justify}
 
+### Problem Resolution
+
+The below resolutions are retrieved from 2 research papers [2][3] and considered to be state-of-the-art methodologies. Although the resolutions are based on a sound theory I will explain them intuitively.
+{: .text-justify}
+
+#### Monte Carlo Dropout Sampling
+
+The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds the input N times through the same network while tweaking the network slightly every time. The tweak is done by shutting down some (different each time) of the network nodes or neurons. This is called Dropout. Dropout is first introduced as a regularization trick to prevent the model from over-fitting during *training* [4]. However, in our case, we are using it during *inference* to sample different parameters distribution. The uncertainty in this case is the output variance. In other words, if the models output different classes or the same class with different class scores the model is considered uncertain about the input.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/guess_food_blindfold.jpg" alt="Guess the food blindfolded" width="50%"> -->
+{: .text-center}
+
+[Guess The Food Blindfolded Challenge](https://www.realplaycoalition.com/activities-for-kids/senses-game/)  
+{: .text-center}
+
+We can this as analogous to shutting down a person's different sensory organs while asking him to recognize objects (say blindfold his eyes one time, and cover his skin in another, and so on). If the person constantly keeps predicting the same object despite losing different sensory organs, this means the object is very familiar to him such that he can figure it using limited sensory organs. On the other hand, if he predicts different objects each time this means that the object is challenging for him. The below figure is a bonus illustration.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/nn_mc_dropout.jpg" alt="MCDropout Uncertanity Quantification" width="50%"> -->
+{: .text-center}
+
+If you are still curious about adversarial inputs, notice that a similar method has been used to detect them [5].
+{: .text-justify}
+
+#### Ensembles
+
+Ensembles are simply training multiple neural networks with different random initialization and different shuffling of the training dataset. The uncertainty will be the variance of the models' predictions. The authors in [2] found it to be more accurate than MC-dropout in approximating the ground truth uncertainty; however, it is computationally expensive.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/young-old-ladies.png" alt="Different Perspective" width="50%"> -->
+{: .text-center}
+
+A group of people didn't agree on the content of image C. This means it is ambiguous.
+{: .text-center}
+
+This reminds me of Stephen Covey "The seven habits of highly effective people" in the paradigm shift section where he tells the story when he gave one group of his students the image (A - young lady) in the above figure and the image (B - old lady) for the other group. He then gave the image (C) to both and asked them to tell what is in it. Certainly, the first group said it was a young lady and the other said it was an old one. This because - like neural networks - each group has a different perspective (different position in the parameters manifold in case of neural networks). And the fact that the same image had different interpretations means it is of ambiguous and uncertain nature. The below figure is a bonus illustration.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/ensembles.PNG" alt="Ensembles" width="50%"> -->
+{: .text-center}
+
+#### Before we continue
+
+Now that uncertainty is more familiar it is good to know two different types of uncertainties. (1) **Aleatoric** uncertainty captures the uncertainty in the data generating process, e.g., inherent randomness of a coin-flipping or measurement noise. This type of uncertainty cannot be reduced even if we collect more training data. (2) **Epistemic** uncertainty models the ignorance of the predictive model where it can be explained away given enough training data. The below [figure](https://towardsdatascience.com/my-deep-learning-model-says-sorry-i-dont-know-the-answer-that-s-absolutely-ok-50ffa562cb0b) explains the concept better. The orange braces corresponds to aleatoric uncertainty while the golden ones correspond to epistemic uncertainty resulting from lack of training data.
+{: .text-justify}
+
+<!-- <img src="{{site.baseurl}}/assets/img/uncertainty_types.png" alt="Uncertainty Types" width="50%"> -->
+{: .text-center}
+
+Type of uncertainties
+{: .text-center}
+
+So far the proposed methodologies target epistemic uncertainty as aleatoric one is already available as the class scores (this is different for regression though, check the references for further details).
+{: .text-justify}
+
