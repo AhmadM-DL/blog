@@ -16,7 +16,7 @@ tagline:             'tagline'
 description:         'On Artificial Intelligence and other stuff'
 url:                 site url
 # rss:                 rss feed url
-baseurl:             '/'
+baseurl:             '/AI-ET-AL/'
 baseurl_posts_img:   '/AI-ET-AL/assets/images/posts/'
 baseurl_featured_img: '/AI-ET-AL/assets/images/hero/'
 baseurl_featured_thumbnail: '/AI-ET-AL/assets/images/thumbnail/'
