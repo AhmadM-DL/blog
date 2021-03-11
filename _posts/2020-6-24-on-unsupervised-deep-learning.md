@@ -2,10 +2,15 @@
 layout: post
 title: On Unsupervised Deep Learning
 date: 2020-06-24 13:32:20 +0200
-description: A simple survey to unsupervised deep learning 
-img: unsupervised.jpg 
-fig-caption: <span>Photo by <a href="https://www.pexels.com/@fotios-photos?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Lisa Fotios</a> on <a href="https://www.pexels.com/photo/child-playing-with-lego-blocks-5435599/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></span>
-tags: [Deep Learning, Unsupervised]
+last_modified_at:  2020-06-24 13:32:20 +0200
+excerpt: A simple survey to unsupervised deep learning 
+tags: Deep Learning, Unsupervised
+image:
+  feature: unsupervised.jpg
+  topPosition: 0px
+bgContrast: dark
+bgGradientOpacity: darker
+syntaxHighlighter: no
 ---
 
 Deep Learning has shown significant improvements over traditional machine learning approaches in the domain of Visual Data. However, its breakthrough has been demonstrated mostly from the Supervised Learning perspective. Supervised Learning demands expansive annotation of data and ignores the tremendously massive amount of easily available unlabeled data. Recently Unsupervised Learning has gained researchers’ attention to make use of the available unlabeled data. In this short article I will try to shed light on the Unsupervised Deep Learning movement and researchers ways of attacking the problem.
@@ -29,7 +34,7 @@ Since 2015 the domain of unsupervised deep learning has gained researchers atten
  With Clustering-Based and Self-Supervised being the most attracting and having the largest number of publications. The movement started initially with Restricted Boltzmann Machines (RBMs) [4] and Deep Belief Networks (DBNs) [2] as generative models to extract hierarchical representation of data. Then by 2015 the Clustering-Based approaches followed along with Self-Supervised movement in parallel. Recently, a handful of Sample-Specificity-Based approaches have been published.
 {: .text-justify}
 
-![Unsupervised Deep Learning]({{site.baseurl}}/assets/img//unsupervised%20deep%20learning.png)
+![]({{ site.baseurl_posts_img }}unsupervised%20deep%20learning.png)
 {: .text-center}
 Unsupervised Deep Learning Coarse Taxonomy
 {: .text-center}
@@ -41,7 +46,7 @@ Unsupervised Deep Learning Coarse Taxonomy
 Clustering-Based Unsupervised Deep Learning simply extends traditional clustering methods by adopting neural networks to learn clustering-friendly representations. We can see them as a neural network that incorporates two losses rather than one, a Network Loss and a Clustering Loss. A hyper-parameter is usually introduced to tradeoff between the losses:
 {: .text-justify}
 
-![Network Losses]({{site.baseurl}}/assets/img//network_loss.PNG)
+![Network Losses]({{ site.baseurl_posts_img }}network_loss.png)
 {: .text-center}
 
 The choice of the network loss and the clustering loss leads to a variety of approaches. From the clustering loss perspective researchers used used k-means, clustering assignment hardening,  agglomerative clustering, locality-preserving loss, group sparsity loss along with k-means, etc.
@@ -53,7 +58,7 @@ From the Network loss perspective the majority used Autoencoders reconstruction 
 A comprehensive survey for clustering-based approaches can be found in [5, 6].
 {: .text-justify}
 
-![Clustering-Based Unsupervised Deep Learning]({{site.baseurl}}/assets/img//clustering_unsuervised_deep_learning.png)
+![Clustering-Based Unsupervised Deep Learning]({{ site.baseurl_posts_img }}clustering-unsuervised-deep-learning.png)
 Clustering-Based Unsupervised Deep Learning. Image from [6].
 {: .text-center}
 
@@ -62,7 +67,7 @@ Clustering-Based Unsupervised Deep Learning. Image from [6].
 In a community parallel to Clustering-Based approaches, Self-Supervised Deep Learning approaches have been also gaining attention and momentum. Rather than introducing new losses to deep models, self-supervised approaches generate pseudo labels for the models to be trained on. The idea is to propose a pretext task – a task that doesn’t require human annotation (i.e. coloring) and it's training data can be automatically generated - for the network to solve. By training the network on the proposed task objective functions it learns features that are relevant for an actual downstream task.
 {: .text-justify}
 
-![The general workflow of self-supervised deep learning]({{site.baseurl}}/assets/img//self-supervised-pipeline.png)
+![The general workflow of self-supervised deep learning]({{ site.baseurl_posts_img }}self-supervised-pipeline.png)
 {: .text-center}
 The general workflow of self-supervised deep learning. Image from [7].
 {: .text-center}
@@ -82,7 +87,7 @@ Examples of tasks that acts on 3-channels images are:
 - Predicting image rotation
 - ...
 
-![Self Supervised Tasks]({{site.baseurl}}/assets/img//self_supervised_tasks.png)
+![Self Supervised Tasks]({{ site.baseurl_posts_img }}self-supervised-tasks.png)
 {: .text-center}
 Examples of proposed self supervised pretext tasks. Clockwise from top left: Predict Relative Position, In-painting,  Predict cross channel, Solving Jigsaw Puzzle.  Images from [7].
 {: .text-center}
@@ -98,7 +103,7 @@ Earlier methods included Deep Belief Networks (DBNs) and Restricted Boltzmann Ma
 Although the motivation behind these approaches is to model the data and be able to generate it, the representation learned during training generative models can be exploited for downstream tasks. Note that Generative models are frequently used for network loss in clustering-based unsupervised deep learning.
 {: .text-justify}
 
-![Generative Adversarial Network]({{site.baseurl}}/assets/img//GAN.png)
+![Generative Adversarial Network]({{ site.baseurl_posts_img }}GAN.png)
 {: .text-center}
 The infamous GAN network. Image from [7].
 {: .text-center}
