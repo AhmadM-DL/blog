@@ -87,7 +87,6 @@ Here I will mention some real software 2.0 examples so that one can understand t
 I think that many people have heard or used Prisma by now. Prisma is a photo-editing mobile application that uses neural networks and artificial intelligence to apply artistic effects to transform images. The app was created by Alexey Moiseenkov, Oleg Poyaganov, Ilya Frolov, Andrey Usoltsev, Aram Hardy. It was launched in June 2016 as a [free mobile app](https://en.wikipedia.org/wiki/Prisma_(app)). Prisma utilizes the recent [neural style transfer](https://en.wikipedia.org/wiki/Neural_Style_Transfer) technology to redraw an image using another image style. See how Prisma is a deep-learning-based product, how the underlying model interpretability doesn't matter, and how it certainly had a High R&D score. Won't this technology be cool for videos? [check out this](https://www.youtube.com/watch?v=Uxax5EKg0zA). Cool ha!
 {: .text-justify}
 
-<!-- <div class="img img--fullContainer img--14xLeading" style="background-image: url({{ site.baseurl_posts_img }}mona_style.jpg);"></div> -->
 ![]({{ site.baseurl_posts_img }}mona_style.jpg)
 {: .text-center}
 
@@ -99,8 +98,9 @@ Mona Lisa in the style of "Woman with a Hat" using neural style transfer. (Image
 Rosebud actually provides multiple software 2.0 products under the umbrella of AI-generated media. It uses the latest technological advances in Generative Adversarial Networks [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network) and [Deepfakes](https://en.wikipedia.org/wiki/Deepfake). Products such as [Tokkingheads](https://tokkingheads.com/) where you make an avatar or the face of a real person articulate your voice or a certain text. [Generative Photos](https://app.generative.photos/) where you can change human models' faces, race, and edit hair. [Faceloop](https://www.rosebud.ai/faceloop) where you can apply new filters to your faces such as changing the hair color, cartoonify, and age. You can try some!
 {: .text-justify}
 
-!["An example of deepfake technology"](./asets/img/../../../assets/img/amy_cage_deepfake.gif)
+!["An example of deepfake technology"]({{ site.baseurl_posts_img }}amy_cage_deepfake.gif)
 {: .text-center}
+
 An example of deepfake technology: in a scene from Man of Steel, actress Amy Adams in the original (left)
 is modified to have the face of actor Nicolas Cage (right) (Image Source Wikipedia)
 {: .text-center}
