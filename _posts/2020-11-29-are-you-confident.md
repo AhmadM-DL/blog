@@ -2,7 +2,7 @@
 layout: post
 title: Are you confident about that, Neural Network?
 date: 2020-11-29 13:32:20 +0200
-last_modified_at:  2021-03-011 13:32:20 +0200
+last_modified_at:  2020-11-29 13:32:20 +0200
 excerpt: A simple introduction to uncertainty in deep learning 
 tags: Deep Learning, Uncertainty, Neural Networks
 categories: Uncertainty
