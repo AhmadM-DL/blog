@@ -7,7 +7,7 @@ excerpt: A simple introduction to uncertainty in deep learning
 tags: Deep Learning, Uncertainty, Neural Networks
 categories: Uncertainty
 image:
-  feature: uncertain_wally.jpg
+  feature: uncertain-wally.jpg
   topPosition: 0px
 bgContrast: dark
 bgGradientOpacity: darker
@@ -27,7 +27,7 @@ Conventional Neural Networks have no inherent uncertainty quantification. This m
 It is good to know that there exist 2 different types of machine learning models. (1) **Discriminative** models which map inputs to their classes by finding decision boundaries. (2) **Generative** models which model the data distribution and find classes central tendency and how they are spread around centers.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}nn_decision_boundary.png)
+![]({{ site.baseurl_posts_img }}nn-decision-boundary.png)
 {: .text-center}
 
 A Neural Network decision boundary over a dataset as a discriminative machine learning model
@@ -39,7 +39,7 @@ Consider the figure above which showcase a dataset of two classes (orange and bl
 On the other hand, **generative** models learn classes probability distribution as in the [Naive Bayes](https://jakevdp.github.io/PythonDataScienceHandbook/06.00-figure-code.html#Gaussian-Naive-Bayes) classifier. The figure below gives the intuition of such model predictions in action. In this case, if we feed the model a far data point it will output a very low class score for both classes as it is very far from both centers and beyond the data standard deviation. In this case, we can say that the model is uncertain about the decision and this point is probably out of the training data domain.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}naive_bayes_fitting.png)
+![]({{ site.baseurl_posts_img }}naive-bayes-fitting.png)
 {: .text-center}
 
 A Naive Bayes output over a dataset as a generative machine learning model
@@ -58,7 +58,7 @@ The below resolutions are retrieved from 2 research papers [2][3] and considered
 The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds the input N times through the same network while tweaking the network slightly every time. The tweak is done by shutting down some (different each time) of the network nodes or neurons. This is called Dropout. Dropout is first introduced as a regularization trick to prevent the model from over-fitting during *training* [4]. However, in our case, we are using it during *inference* to sample different parameters distribution. The uncertainty in this case is the output variance. In other words, if the models output different classes or the same class with different class scores the model is considered uncertain about the input.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}guess_food_blindfold.png)
+![]({{ site.baseurl_posts_img }}guess-food-blindfold.png)
 
 {: .text-center}
 
@@ -68,7 +68,7 @@ The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds 
 We can this as analogous to shutting down a person's different sensory organs while asking him to recognize objects (say blindfold his eyes one time, and cover his skin in another, and so on). If the person constantly keeps predicting the same object despite losing different sensory organs, this means the object is very familiar to him such that he can figure it using limited sensory organs. On the other hand, if he predicts different objects each time this means that the object is challenging for him. The below figure is a bonus illustration.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}nn_mc_dropout.jpg.png)
+![]({{ site.baseurl_posts_img }}nn-mc-dropout.jpg.png)
 {: .text-center}
 
 If you are still curious about adversarial inputs, notice that a similar method has been used to detect them [5].
@@ -98,7 +98,7 @@ This reminds me of Stephen Covey "The seven habits of highly effective people" i
 Now that uncertainty is more familiar it is good to know two different types of uncertainties. (1) **Aleatoric** uncertainty captures the uncertainty in the data generating process, e.g., inherent randomness of a coin-flipping or measurement noise. This type of uncertainty cannot be reduced even if we collect more training data. (2) **Epistemic** uncertainty models the ignorance of the predictive model where it can be explained away given enough training data. The below [figure](https://towardsdatascience.com/my-deep-learning-model-says-sorry-i-dont-know-the-answer-that-s-absolutely-ok-50ffa562cb0b) explains the concept better. The orange braces corresponds to aleatoric uncertainty while the golden ones correspond to epistemic uncertainty resulting from lack of training data.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}uncertainty_types.png)
+![]({{ site.baseurl_posts_img }}uncertainty-types.png)
 {: .text-center}
 
 Type of uncertainties
@@ -126,7 +126,7 @@ An MDN is a variant of a neural network proposed in 1994 by Christopher Bishop [
 Rather than predicting the target directly, MDNs predicts a linear combination of **k** distributions. Rather than having one output neuron, it has 3*K ones. For each distribution, the network predicts a mean, a standard deviation, and the distribution weight. Increasing K gives the model more flexibility to model multi-model targets. The below figure illustrates an MDN.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}normal_mdn.png)
+![]({{ site.baseurl_posts_img }}normal-mdn.png)
 
 {: .text-center}
 
