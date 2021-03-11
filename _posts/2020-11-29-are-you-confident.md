@@ -2,14 +2,12 @@
 layout: post
 title: Are you confident about that, Neural Network?
 date: 2020-11-29 13:32:20 +0200
+last_modified_at:  2021-03-011 13:32:20 +0200
 excerpt: A simple introduction to uncertainty in deep learning 
-img: uncertain_wally.jpg # Add image post (optional)
-fig-caption: <span>Photo by <a href="https://unsplash.com/@ninjason?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jason Leung</a> on <a href="https://unsplash.com/s/photos/thinking-robot?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-tags: [Deep Learning, Uncertainty, Neural Networks]
-last_modified_at:  2014-12-15 01:00:00
-categories: history
+tags: Deep Learning, Uncertainty, Neural Networks
+categories: Uncertainty
 image:
-  feature: walt-disney.jpg
+  feature: uncertain_wally.jpg
   topPosition: 0px
 bgContrast: dark
 bgGradientOpacity: darker
@@ -29,7 +27,7 @@ Conventional Neural Networks have no inherent uncertainty quantification. This m
 It is good to know that there exist 2 different types of machine learning models. (1) **Discriminative** models which map inputs to their classes by finding decision boundaries. (2) **Generative** models which model the data distribution and find classes central tendency and how they are spread around centers.
 {: .text-justify}
 
-<!-- <div class="img img--fullContainer img--14xLeading" style="background-image: url({{ site.baseurl_posts_img }}nn_decision_boundary.PNG);" width="50%" alt="A Neural Network decision boundary over a dataset"></div> -->
+![]({{ site.baseurl_posts_img }}nn_decision_boundary.PNG)
 {: .text-center}
 
 A Neural Network decision boundary over a dataset as a discriminative machine learning model
@@ -41,7 +39,7 @@ Consider the figure above which showcase a dataset of two classes (orange and bl
 On the other hand, **generative** models learn classes probability distribution as in the [Naive Bayes](https://jakevdp.github.io/PythonDataScienceHandbook/06.00-figure-code.html#Gaussian-Naive-Bayes) classifier. The figure below gives the intuition of such model predictions in action. In this case, if we feed the model a far data point it will output a very low class score for both classes as it is very far from both centers and beyond the data standard deviation. In this case, we can say that the model is uncertain about the decision and this point is probably out of the training data domain.
 {: .text-justify}
 
-<!-- <img src="{{site.baseurl}}/assets/img/naive_bayes_fitting.png" alt="A Neural Network decision boundary over a dataset" width="50%"> -->
+![]({{ site.baseurl_posts_img }}naive_bayes_fitting.PNG)
 {: .text-center}
 
 A Naive Bayes output over a dataset as a generative machine learning model
@@ -152,3 +150,24 @@ The authors proved that those two quantities respond to different ground truth u
 
 This might have been a wee bit heavy for some readers. Check out the below video to refresh your mind and see how humans can beat machines through out-of-domain inputs.
 {: .text-justify}
+
+{: .text-center}
+
+### Conclusion
+
+This was a simple introduction to uncertainty quantification in deep learning. Neural networks don't have inherent uncertainty quantification thus this called for the augmentation of such concept. We discussed three proposals to resolve this: MC-dropout, ensembles, and MDNs. The reader is referred to the references section for further details. Please don't hesitate to mention any feedback in the comments section below (you can comment as a guest), as this will help me optimize my writings.
+{: .text-justify}
+
+### References
+
+[1] [Explaining And Harnessing Adversarial Examples, Goodfellow et. al.](https://arxiv.org/pdf/1412.6572.pdf)
+
+[2] [Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision, Gustafsson et. al.](https://arxiv.org/abs/1906.01620)
+
+[3] [Uncertainty-Aware Learning from Demonstration using Mixture Density Networks with Sampling-Free Variance Modeling, Choi et. al.](https://arxiv.org/abs/1709.02249)
+
+[4] [Dropout: A Simple Way to Prevent Neural Networks from Overfitting, Srivastava et. al.](https://jmlr.org/papers/v15/srivastava14a.html)
+
+[5] [DeepMutation: Mutation Testing of Deep Learning Systems, Lei et. al.](https://arxiv.org/abs/1805.05206)
+
+[6] [Mixture density networks, Bishop](https://research.aston.ac.uk/en/publications/mixture-density-networks)
