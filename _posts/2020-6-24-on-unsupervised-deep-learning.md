@@ -5,6 +5,7 @@ date: 2020-06-24 13:32:20 +0200
 last_modified_at:  2020-06-24 13:32:20 +0200
 excerpt: A simple survey to unsupervised deep learning 
 tags: Deep Learning, Unsupervised
+categories: Unsupervised Deep Learning
 image:
   feature: unsupervised.jpg
   topPosition: 0px
