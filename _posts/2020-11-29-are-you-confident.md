@@ -58,7 +58,7 @@ The below resolutions are retrieved from 2 research papers [2][3] and considered
 The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds the input N times through the same network while tweaking the network slightly every time. The tweak is done by shutting down some (different each time) of the network nodes or neurons. This is called Dropout. Dropout is first introduced as a regularization trick to prevent the model from over-fitting during *training* [4]. However, in our case, we are using it during *inference* to sample different parameters distribution. The uncertainty in this case is the output variance. In other words, if the models output different classes or the same class with different class scores the model is considered uncertain about the input.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}guess-food-blindfold.png)
+![]({{ site.baseurl_posts_img }}guess-food-blindfold.jpg)
 
 {: .text-center}
 
@@ -68,7 +68,7 @@ The simplest of all resolutions is Monte Carlo Dropout (MC-Dropout) which feeds 
 We can this as analogous to shutting down a person's different sensory organs while asking him to recognize objects (say blindfold his eyes one time, and cover his skin in another, and so on). If the person constantly keeps predicting the same object despite losing different sensory organs, this means the object is very familiar to him such that he can figure it using limited sensory organs. On the other hand, if he predicts different objects each time this means that the object is challenging for him. The below figure is a bonus illustration.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}nn-mc-dropout.jpg.png)
+![]({{ site.baseurl_posts_img }}nn-mc-dropout.jpg)
 {: .text-center}
 
 If you are still curious about adversarial inputs, notice that a similar method has been used to detect them [5].
@@ -79,7 +79,7 @@ If you are still curious about adversarial inputs, notice that a similar method 
 Ensembles are simply training multiple neural networks with different random initialization and different shuffling of the training dataset. The uncertainty will be the variance of the models' predictions. The authors in [2] found it to be more accurate than MC-dropout in approximating the ground truth uncertainty; however, it is computationally expensive.
 {: .text-justify}
 
-![]({{ site.baseurl_posts_img }}young-old-ladies.jpg)
+![]({{ site.baseurl_posts_img }}young-old-ladies.png)
 
 {: .text-center}
 
