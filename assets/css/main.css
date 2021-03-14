@@ -2198,6 +2198,14 @@ body {
   background-image: url(../images/twitter--black.svg);
 }
 
+.socialAccount--github {
+  background-image: url(../images/github.svg);
+}
+
+.socialAccount--medium {
+  background-image: url(../images/medium.svg);
+}
+
 .socialAccount--facebook {
   background-image: url(../images/facebook--black.svg);
 }
