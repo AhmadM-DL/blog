@@ -524,8 +524,8 @@ body {
 .textLogo--sidebar {
   width: 100%;
   height: auto;
-  background-size: contain;
-  background-position: center;
+  /* background-size: contain;
+  background-position: center; */
   opacity: 0.8;
   font-size: 2vw;
 }
