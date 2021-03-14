@@ -2166,6 +2166,7 @@ body {
   margin: 1.5rem auto;
   padding-left: 0;
   width: 50%;
+  padding-left: 60px;
 }
 .socialAccountList:before, .socialAccountList:after {
   content: " ";
