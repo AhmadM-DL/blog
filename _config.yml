@@ -10,9 +10,9 @@ permalink:           :title
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
 locale:              your locale language # eg. en_us
-name:                AI et. al.
+name:                Artificial Intelligence et. al.
 title:               AI et. al.
-tagline:             'tagline'
+tagline:             A Collection of Publications On Artificial Intelligence and Other Stuff 
 description:         'On Artificial Intelligence and other stuff'
 url:                 site url
 # rss:                 rss feed url
