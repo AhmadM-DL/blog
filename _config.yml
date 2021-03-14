@@ -1,14 +1,14 @@
 # Permalinks
-permalink:           :title
+# permalink:           :title
 #relative_permalinks: true
 
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
 locale:              your locale language # eg. en_us
 name:                Artificial Intelligence et. al.
-title:               AI et. al.
+title:               Artificial Intelligence et. al.
 tagline:             A Collection of Publications On Artificial Intelligence and Other Stuff 
-description:         'On Artificial Intelligence and other stuff'
+description:         A Collection of Publications On Artificial Intelligence and Other Stuff
 url:                 site url
 # rss:                 rss feed url
 baseurl:             '/AI-ET-AL/'
@@ -25,7 +25,8 @@ author:
   twitter:           Ahmad__Mustapha
   linkedin:          ahmad-mustapha-ml
   email:             ahmad.m.mustapha@hotmail.com
-  medium:            ahmad-mustapha
+  medium:            '@ahmad-mustapha'
+  github:            AhmadM-DL
 
 # fb_admins:           your facebook profile id
 # fb_appid:            your facebook app id
