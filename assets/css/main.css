@@ -493,8 +493,14 @@ body {
 }
 
 .brandLogo {
-  display: block;
-  font-size: 6vw;
+  background-image: url(../images/logo-white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 0;
+  text-indent: -100em;
+  overflow: hidden;
+}
 }
 
 .brandLogo--small {
@@ -503,7 +509,7 @@ body {
 }
 
 .brandLogo--black {
-  color: #000;
+  background-image: url(../images/logo-black.svg);
 }
 
 .textLogo {
@@ -524,7 +530,7 @@ body {
   font-size: 2vw;
 }
 .textLogo--sidebar:hover {
-  opacity: 1;
+  background-image: url(../images/logo-text-white.svg);
 }
 
 .textLogo--frontpage {
