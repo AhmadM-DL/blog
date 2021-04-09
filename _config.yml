@@ -9,7 +9,7 @@ name:                Artificial Intelligence et. al.
 title:               Artificial Intelligence et. al.
 tagline:             A Collection of Publications On Artificial Intelligence and Other Stuff 
 description:         A Collection of Publications On Artificial Intelligence and Other Stuff
-url:                 'https://ahmadm-dl.github.io/AI-ET-AL'
+url:                 'https://ahmadm-dl.github.io/AI-ET-AL/'
 # rss:                 rss feed url
 baseurl:             '/'
 baseurl_posts_img:   '/AI-ET-AL/assets/images/posts/'
