@@ -9,14 +9,14 @@ name:                Artificial Intelligence et. al.
 title:               Artificial Intelligence et. al.
 tagline:             A Collection of Publications On Artificial Intelligence and Other Stuff 
 description:         A Collection of Publications On Artificial Intelligence and Other Stuff
-url:                 'https://ahmadm-dl.github.io/'
+url:                 'https://ahmadm-dl.github.io'
 # rss:                 rss feed url
-baseurl:             '/AI-ET-AL/'
+baseurl:             '/AI-ET-AL'
 baseurl_posts_img:   '/AI-ET-AL/assets/images/posts/'
 baseurl_featured_img: '/AI-ET-AL/assets/images/hero/'
 baseurl_featured_thumbnail: '/AI-ET-AL/assets/images/thumbnail/'
 baseurl_javascripts: '/AI-ET-AL/assets/javascripts/'            
-icon:                '/assets/img/open-graph.png'
+icon:                '/assets/images/open-graph.png'
 disqus:              https-ahmadm-dl-github-io
 
 author:
